@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRAYCODE JavaScript</title>
+	<script>
+		window.addEventListener('load', function(){
+			document.getElementById("content1").addEventListener('mousedown', logPosition);
+		});
+
+		function logPosition(event) {
+
+				// ディスプレイ
+				console.log("screenX: " + event.screenX);
+				console.log("screenY: " + event.changedTouches[0].screenY);
+
+				// ブラウザ
+				console.log("clientX: " + event.changedTouches[0].clientX);
+				console.log("clientY: " + event.changedTouches[0].clientY);
+
+				// ページ
+				console.log("pageX: " + event.changedTouches[0].pageX);
+				console.log("pageY: " + event.changedTouches[0].pageY);
+			}
+		
+	</script>
+</head>
+<body>
+<h1>JavaScriptレシピ</h1>
+<section id="content1" style="width: 100%; height: 3000px;">
+</section>
+</body>
+</html>
